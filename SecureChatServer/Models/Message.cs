@@ -42,6 +42,7 @@ namespace SecureChatServer.Models
             {
                 id = Id,
                 contents = Contents.Select(c => c.ToViewModel()).ToArray(),
+                sender = Sender.ToViewModel(),
                 dateCreated = DateCreated,
                 messageType = Type.ToString()
             };

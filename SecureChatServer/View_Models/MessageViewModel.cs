@@ -9,6 +9,7 @@ namespace SecureChatServer.View_Models
     {
         public long id { get; set; }
         public EncryptedMessageViewModel[] contents { get; set; }
+        public UserViewModel sender { get; set; }
         public string messageType { get; set; }
         public DateTime dateCreated { get; set; }
     }
