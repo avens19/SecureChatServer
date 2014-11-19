@@ -188,19 +188,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201411172248477_InitialCreate.cs" />
-    <Compile Include="Migrations\201411172248477_InitialCreate.Designer.cs">
-      <DependentUpon>201411172248477_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201411180126437_Update2.cs" />
-    <Compile Include="Migrations\201411180126437_Update2.Designer.cs">
-      <DependentUpon>201411180126437_Update2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201411190011553_Update3.cs" />
-    <Compile Include="Migrations\201411190011553_Update3.Designer.cs">
-      <DependentUpon>201411190011553_Update3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
     <Compile Include="Models\Chat.cs" />
@@ -218,10 +205,6 @@
     <Compile Include="View_Models\UserViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\aspnet-SecureChatServer-20141117030817.mdf" />
-    <Content Include="App_Data\aspnet-SecureChatServer-20141117030817_log.ldf">
-      <DependentUpon>aspnet-SecureChatServer-20141117030817.mdf</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="ApplicationInsights.config" />
@@ -245,20 +228,11 @@
     </Content>
     <Content Include="Scripts\jquery-2.1.1.min.map" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="packages.config" />
+    <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201411172248477_InitialCreate.resx">
-      <DependentUpon>201411172248477_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201411180126437_Update2.resx">
-      <DependentUpon>201411180126437_Update2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201411190011553_Update3.resx">
-      <DependentUpon>201411190011553_Update3.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="packages.config" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
