@@ -75,11 +75,9 @@ namespace SecureChatServer.Controllers
         {
             string myUsername = User.Identity.GetUserName();
 
-            return
-                Ok(
-                    _db.Chats.Where(c => c.Chatters.Any(u => u.UserName == myUsername))
-                        .Select(c => c.ToViewModel())
-                        .ToArray());
+            var chats = _db.Chats.Where(c => c.Chatters.Any(u => u.UserName == myUsername)).ToArray();
+
+            return Ok(chats.Select(c => c.ToViewModel()).ToArray());
         }
 
         [HttpPost]
