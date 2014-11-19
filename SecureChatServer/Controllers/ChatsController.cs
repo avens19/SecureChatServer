@@ -69,6 +69,19 @@ namespace SecureChatServer.Controllers
             return Created(string.Format("api/Chat/{0}", newChat.Id), newChat.ToViewModel());
         }
 
+        [HttpGet]
+        [Route("")]
+        public IHttpActionResult GetChats()
+        {
+            string myUsername = User.Identity.GetUserName();
+
+            return
+                Ok(
+                    _db.Chats.Where(c => c.Chatters.Any(u => u.UserName == myUsername))
+                        .Select(c => c.ToViewModel())
+                        .ToArray());
+        }
+
         [HttpPost]
         [Route("{id}/Messages")]
         public IHttpActionResult AddMessage(long id, MessageViewModel message)
